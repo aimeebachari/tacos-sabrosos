@@ -1,0 +1,5 @@
+<h3> Taco Shops: </h3>
+
+<% @taco_shops.each do |shop| %>
+  <%= link_to shop.name, taco_shop_path(shop.id) %>
+<% end %>
