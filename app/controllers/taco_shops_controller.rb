@@ -21,6 +21,9 @@ class TacoShopsController < ApplicationController
 
   def show
     @taco_shop = TacoShop.find(params[:id])
+    @review = Review.new
+    @user = current_user
+    @reviews = @taco_shop.reviews
   end
 
   private

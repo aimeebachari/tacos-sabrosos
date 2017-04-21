@@ -1,3 +1,15 @@
 <h3><%= @taco_shop.name %></h3>
 <h3><%= @taco_shop.address %></h3>
 <h3><%= @taco_shop.description %></h3>
+
+<%= button_to "Back", taco_shops_path, method: :get, class: "button" %>
+
+<% if @user.id == @taco_shop.user_id || @user.admin? %>
+    <%= button_to 'Edit Event', edit_taco_shop_path(@taco_shop), method: :get, class: "button"%>
+<% end %>
+
+<div id="reviewList" data-id="<%= @taco_shop.id%>"></div>
+  <div id="currentUser" data-id="<%= current_user.id %>"></div>
+  <div>
+    <div id="reviews"></div>
+  </div>

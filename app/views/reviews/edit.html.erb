@@ -1,0 +1,5 @@
+<h3>Edit Review for <%= @taco_shop.name %></h3>
+
+<%= render 'form' %>
+
+<%= button_to "Delete", taco_shop_review(@review), method: :delete, class: "button", data: {confirm: "Are you sure?"} %>

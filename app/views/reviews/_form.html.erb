@@ -1,0 +1,12 @@
+<%= form_for [@taco_shop, @review] do |f| %>
+
+  <div>
+    <%= f.label :body, "Review" %>
+    <%= f.text_field :body %>
+  </div>
+
+  <div>
+    <%= f.submit "Update", class: "button" %>
+  </div>
+
+<% end %>
